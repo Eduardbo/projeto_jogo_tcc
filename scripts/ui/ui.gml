@@ -1,0 +1,1 @@
+global.book = 0;
