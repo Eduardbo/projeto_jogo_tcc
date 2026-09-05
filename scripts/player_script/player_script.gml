@@ -10,13 +10,12 @@ function player_state_free(){
 		 var _key_up = keyboard_check(ord("W"));
 		 var _key_down = keyboard_check(ord("S"));
 		 var _key_dash = keyboard_check_pressed(vk_shift);
+		 var _key_attack = keyboard_check_pressed(ord("F")); //ataque
 	
 	 #endregion
 	
 	#region Movimentação
 	var _move = _key_right - _key_left !=0;
-
-
 
 	if(_move){
 		sprite_index = spr_cat_run;
@@ -86,9 +85,19 @@ function player_state_free(){
 			hspd-=3 * x_scale;
 		}
 	}
+
+	
+	
 #endregion
 
-	#region	colidindo com o inimigo
+	#region Queda do mapa
+	if (y > room_height + 50) {
+	global.vida -= 1;
+    room_restart(); // Recarrega a sala do zero
+	}	
+#endregion
+
+	#region	Colidindo com o inimigo
 	
 	//MACHIMELO MEDONHO
 	 if(!_ground and vspd > 0){
@@ -105,14 +114,21 @@ function player_state_free(){
 
 	#region Levando Dano
 		
-		var _collision_e_parent = instance_place(x+hspd,y,obj_enemy_parent); //Verificando a colissao com todos os obj inimigos
-		if(_collision_e_parent){
-			hspd = 0;
-			vspd = 0;
-			vspd-=4;
-			damage_dir = point_direction(_collision_e_parent.x,_collision_e_parent.y,x,y);
-			state = player_state_damage;
-		}	
+	var _collision_e_parent = instance_place(x+hspd, y, obj_enemy_parent); 
+
+	// "&& alarm[0] <= 0" para ele não tomar dano de contato se já estiver piscando
+	if (_collision_e_parent && alarm[0] <= 0) { 
+	global.vida -= 1; // descontar a vida aqui
+	hspd = 0;
+	vspd = 0;
+	vspd -= 4;
+	damage_dir = point_direction(_collision_e_parent.x, _collision_e_parent.y, x, y);
+	
+	alarm[0] = 120; // Ativa o tempo de piscar e ficar invulnerável por contato também
+	
+	state = player_state_damage;
+}
+	
 
 	//Estado de Damage no meu obj jogador
 	player_state_damage = function(){
@@ -164,4 +180,19 @@ function player_state_free(){
 		 
 	#endregion
 	
+	#region Contador de vida
+	
+	if(global.vida < 1){
+		state = player_state_dead;
+		}
+	
+#endregion
+	
+	#region ATAQUE
+	if (_key_attack) {
+		state = player_state_attack;
+		image_index = 0;
+	}
+	
+	#endregion
 }

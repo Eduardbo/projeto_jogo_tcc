@@ -1,4 +1,4 @@
-event_inherited();
+ event_inherited();
 
 can_move = 0;						//VARIAVEL QUE INFORMA SE POSSO ME MOVER OU NÃO 
 //move_dir = 0;						// MOVER P. DIREITA

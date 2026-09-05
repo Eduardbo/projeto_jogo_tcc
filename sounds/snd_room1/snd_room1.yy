@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":217.14142,
+  "duration":217.14143,
   "exportDir":"",
   "name":"snd_room1",
   "parent":{
