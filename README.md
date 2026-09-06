@@ -29,4 +29,4 @@ Se você deseja baixar e testar o projeto no seu computador, escolha uma das op�
 Se você tem o Git instalado e deseja clonar o repositório mantendo a conexão para futuros updates:
 1. Copie o link HTTPS do repositório (clicando no botão verde `<> Code`).
 2. Abra o seu terminal, Navegue até a pasta onde deseja salvar o projeto:
-3. ```git clone ```
+3. ```git clone https://github.com/Eduardbo/projeto_jogo_tcc/tree/main```
