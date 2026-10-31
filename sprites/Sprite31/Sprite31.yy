@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"cenario_floresta",
-    "path":"folders/Sprites/cenario/cenario_floresta.yy",
+    "path":"folders/Sprites/cenario_floresta.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

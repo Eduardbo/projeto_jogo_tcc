@@ -11,8 +11,8 @@
   "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"enemys",
+    "path":"folders/Objects/enemys.yy",
   },
   "parentObjectId":{
     "name":"obj_enties_parent",

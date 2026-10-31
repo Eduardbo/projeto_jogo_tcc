@@ -6,7 +6,7 @@ hp = 6;
 // Variáveis de Dano/Knockback 
 damage_dir = 0;
 damage_time = 0;
-damage_distance = 15; 
+damage_distance = 3; 
 
 move_spd = 1;
 chase_spd = 2; // Velocidade maior para quando estiver correndo atrás do player

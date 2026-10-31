@@ -1,2 +1,2 @@
-global.book = 0;
+global.coins = 0;
 global.vida = 5;

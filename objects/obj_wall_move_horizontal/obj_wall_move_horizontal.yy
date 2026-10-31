@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_wall_move",
-    "path":"sprites/spr_wall_move/spr_wall_move.yy",
+    "name":"spr_base_flutuante",
+    "path":"sprites/spr_base_flutuante/spr_base_flutuante.yy",
   },
   "spriteMaskId":null,
   "visible":true,
