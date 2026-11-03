@@ -1,32 +1,69 @@
-# Projeto TCC - Jogo de Plataforma 2D (GameMaker)
+# Jogo de Plataforma 2D (TCC - UNIP 2026)
 
-Este repositório contém o código-fonte e os assets do meu Trabalho de Conclusão de Curso (TCC), um jogo de plataforma 2D desenvolvido utilizando a engine **GameMaker**.
+Repositório oficial com o código-fonte e assets do Trabalho de Conclusão de Curso II (TC II) do curso de Ciência da Computação da Universidade Paulista (UNIP).
 
-## 🛠️ Tecnologias e Ferramentas
-* **Engine:** GameMaker (Linguagem GML - GameMaker Language)
-* **Controle de Versão:** Git & GitHub
-
-## 🎮 Controles do Jogo
-* **A / D:** Movimentar para esquerda e direita
-* **Espaço:** Pular (suporta Coyote Time e pulo duplo/wall jump)
-* **Shift:** Realizar Dash
-* **J:** Atacar com a espada
+**Título do Trabalho:** DESENVOLVIMENTO DE UM AMBIENTE GRÁFICO 2D UTILIZANDO O GAMEMAKER STUDIO 2 **Autores:** Eduardo &amp; Ana **Engine:** GameMaker (Linguagem GML - GameMaker Language)
 
 ---
 
-## Como baixar e clonar o repositório
+## Tecnologias e Arquitetura
 
-Se você deseja baixar e testar o projeto no seu computador, escolha uma das opções abaixo:
+* **Engine:** GameMaker Studio 2 (GML)
+* **Arquitetura:** Máquina de Estados Finitos (FSM - Finite State Machine)
+* **Recursos Técnicos:** Colisão hermética com máscara estática (spr\_cat\_mask), física de pulo tolerante (Coyote Time), deslocamento rápido (Dash), Wall Jump e trepidação de câmera (Screen Shake).
 
-### Opção 1: Baixar em formato ZIP (Mais rápido)
-1. Acesse a página principal do repositório no GitHub.
-2. Clique no botão verde **`<> Code`** no canto superior direito.
-3. Selecione a opção **`Download ZIP`**.
-4. Extraia o arquivo compactado no seu computador.
-5. Abra o arquivo com extensão **`.yyp`** (projeto do GameMaker) dentro do GameMaker Studio.
+---
 
-### Opção 2: Clonar usando o Git (Para desenvolvedores)
-Se você tem o Git instalado e deseja clonar o repositório mantendo a conexão para futuros updates:
-1. Copie o link HTTPS do repositório (clicando no botão verde `<> Code`).
-2. Abra o seu terminal, Navegue até a pasta onde deseja salvar o projeto:
-3. ```git clone https://github.com/Eduardbo/projeto_jogo_tcc/tree/main```
+## Controles do Jogo
+
+| Comando          | Tecla                                 | Descrição                                                   |
+| ---------------- | ------------------------------------- | ----------------------------------------------------------- |
+| **Movimentação** | A / D ou Seta Esquerda / Seta Direita | Mover personagem para a esquerda/direita                    |
+| **Pulo**         | Espaço                                | Pulo simples, Coyote Time nas bordas e Wall Jump em paredes |
+| **Dash**         | Shift                                 | Deslocamento rápido horizontal                              |
+| **Ataque**       | J                                     | Golpe de espada em curta distância                          |
+
+---
+
+## Pré-requisitos: Baixando e Instalando o GameMaker
+
+Para abrir e executar o projeto, você precisará ter o GameMaker instalado no seu computador:
+
+1. **Baixar o GameMaker:**  
+  * Acesse o site oficial do GameMaker ([gamemaker.io](https://gamemaker-io.translate.goog/en?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc&_x_tr_hist=true)).
+  * Clique em Download Gratuito (Windows ou macOS).
+2. **Instalar:**  
+  * Execute o instalador baixado e siga o assistente padrão de instalação.
+3. **Criar / Fazer Login na Conta:**  
+  * Ao abrir o GameMaker pela primeira vez, faça login com a sua conta Opera / YoYo Games (é possível criar uma conta gratuita).
+
+---
+
+## Como Baixar e Rodar o Projeto
+
+### Opção 1: Baixar como arquivo ZIP (Mais simples)
+
+1. No topo da página do repositório no GitHub, clique no botão verde Code.
+2. Selecione a opção Download ZIP.
+3. Extraia a pasta compactada no seu computador.
+4. Abra o GameMaker Studio 2.
+5. Na tela inicial da IDE, clique em Open (Abrir) e navegue até a pasta extraída.
+6. Selecione o arquivo do projeto com extensão .yyp (ex: projeto\_jogo\_tcc.yyp).
+
+### Opção 2: Clonar via Git (Para desenvolvedores)
+
+Caso tenha o Git instalado em sua máquina:
+
+1. Abra o terminal (Prompt de Comando ou Git Bash).
+2. Execute o comando de clonagem com a URL do seu repositório.
+3. Abra o GameMaker Studio 2, clique em Open e selecione o arquivo .yyp dentro da pasta clonada.
+
+---
+
+## Executando o Jogo
+
+Assim que o projeto carregar na interface do GameMaker:
+
+1. Aguarde a barra de progresso no canto inferior carregar todos os assets.
+2. Pressione a tecla F5 do seu teclado (ou clique no ícone do botão Play no canto superior esquerdo da tela).
+3. O jogo será compilado e a janela da partida será iniciada automaticamente!
